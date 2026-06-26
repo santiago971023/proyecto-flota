@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: flota-service
+
+server:
+  port: 8083 # O el puerto que le asignes
+
+vehiculo:
+  service:
+    url: http://localhost:8081 # El puerto donde corre tu MS de Vehiculos
+
+cotizacion:
+  service:
+    url: http://localhost:8082 # El puerto donde corre tu MS de Cotizaciones
