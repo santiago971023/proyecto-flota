@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: Api_Gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: flota-route
+          uri: lb://FLOTA-SERVICE
+          predicates:
+            - Path=/api/v1/flota/**

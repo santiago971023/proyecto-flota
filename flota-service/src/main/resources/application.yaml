@@ -3,12 +3,18 @@ spring:
     name: flota-service
 
 server:
-  port: 8083 # O el puerto que le asignes
+  port: 8083
 
 vehiculo:
   service:
-    url: http://localhost:8081 # El puerto donde corre tu MS de Vehiculos
+    url: http://localhost:8081
 
 cotizacion:
   service:
-    url: http://localhost:8082 # El puerto donde corre tu MS de Cotizaciones
+    url: http://localhost:8082
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
